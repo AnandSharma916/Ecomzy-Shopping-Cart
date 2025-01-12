@@ -1,8 +1,5 @@
-- [Deployment link=>ecomzy-shopping-cart-project.vercel.app]
-
-(#)
-- [Deployment link=>ecomzy-shopping-cart-project.vercel.app](#Deployment link-ecomzy-shopping-cart-project.vercel.app)
-
+[Deployment Link](https://ecomzy-shopping-cart-project.vercel.app)
+---
 # Ecomzy-Shopping-Cart
 
 ## Table of Contents
