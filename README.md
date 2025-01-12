@@ -32,7 +32,7 @@
 
 ## Preview
 
-![image](https://github.com/AnandSharma916/Ecomzy-Shopping-Cart/assets/65209607/36e61584-3576-4bc9-836a-0f2fd7dafef9)
+![image](https://github.com/AnandSharma916/Ecomzy-Shopping-Cart-Project/blob/efecfaa92c9cbb3821207d0e29191ce6a4bde152/screenshot1.png)
 
 ![image](https://github.com/AnandSharma916/Ecomzy-Shopping-Cart/assets/65209607/bac43e81-8946-40b3-8bc4-b40b0fdad136)
 
