@@ -14,56 +14,62 @@ const Login = () => {
       return;
     }
     toast.success('Login successful!');
+    // TODO: Send login credentials to backend API
   };
 
   return (
     <div
-      className="relative min-h-screen flex items-center justify-center bg-cover bg-center"
+      className="relative flex items-center justify-center min-h-screen bg-center bg-cover"
       style={{
         backgroundImage:
           "url('https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=1950&q=80')",
       }}
     >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black opacity-60"></div>
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
 
-      {/* Glassmorphism Card with updated size */}
-      <div className="relative z-10 backdrop-blur-md bg-white/80 p-10 rounded-2xl shadow-2xl w-full max-w-lg animate-fadeIn">
+      {/* Glassmorphic Card with Top Spacing */}
+      <div className="relative z-10 w-full max-w-md p-8 mt-16 shadow-xl bg-white/80 backdrop-blur-md rounded-2xl animate-fadeIn">
         {/* Logo and Title */}
-        <div className="flex flex-col items-center mb-6">
+        <div className="mb-6 text-center">
           <img
             src="https://cdn-icons-png.flaticon.com/512/2331/2331943.png"
             alt="Promopact Logo"
-            className="w-16 h-16 mb-2"
+            className="w-16 h-16 mx-auto mb-3"
           />
-          <h1 className="text-2xl font-bold text-cyan-800 text-center">
+          <h2 className="text-2xl font-bold text-blue-800">
             Promopact Marketing India Pvt Ltd
-          </h1>
-          <p className="text-sm text-gray-700 mt-1 text-center">
+          </h2>
+          <p className="mt-1 text-sm text-gray-700">
             Welcome back! Login to your e-commerce dashboard
           </p>
         </div>
 
         {/* Login Form */}
-        <form onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+        <form onSubmit={handleSubmit} className="space-y-5">
+          <div>
+            <label className="block mb-1 text-sm font-medium text-gray-700">
+              Email Address
+            </label>
             <input
               type="email"
-              placeholder="Enter email"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500"
+              placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              className="w-full px-4 py-2 transition border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
-          <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700 mb-1">Password</label>
+
+          <div>
+            <label className="block mb-1 text-sm font-medium text-gray-700">
+              Password
+            </label>
             <input
               type={showPassword ? 'text' : 'password'}
-              placeholder="Enter password"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500"
+              placeholder="Enter your password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              className="w-full px-4 py-2 transition border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <div className="flex items-center mt-2">
               <input
@@ -72,28 +78,32 @@ const Login = () => {
                 onChange={() => setShowPassword(!showPassword)}
                 className="mr-2"
               />
-              <label className="text-sm text-gray-600">Show Password</label>
+              <span className="text-sm text-gray-600">Show Password</span>
             </div>
           </div>
+
           <button
             type="submit"
-            className="w-full bg-cyan-700 hover:bg-cyan-800 text-white font-semibold py-2 rounded-md transition duration-300"
+            className="w-full py-2 font-semibold text-white transition duration-300 bg-blue-600 rounded-md shadow-sm hover:bg-blue-700"
           >
-            SIGN IN
+            Sign In
           </button>
         </form>
 
-        {/* Extra Links */}
-        <div className="text-sm text-center mt-4">
-          <button className="text-cyan-700 underline hover:text-cyan-900 transition">
+        {/* Links */}
+        <div className="mt-5 text-sm text-center text-gray-700">
+          <button className="text-blue-700 transition hover:underline">
             Forgot Username / Password?
           </button>
         </div>
-        <div className="text-sm text-center mt-2 text-gray-700">
+        <div className="mt-2 text-sm text-center text-gray-700">
           Don’t have an account?{' '}
-          <button className="text-cyan-700 underline hover:text-cyan-900 transition">
+          <a
+            href="/register"
+            className="font-medium text-blue-700 transition hover:underline"
+          >
             Sign up
-          </button>
+          </a>
         </div>
       </div>
     </div>

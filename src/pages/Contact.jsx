@@ -19,73 +19,73 @@ const ContactPage = () => {
 
   return (
     <div style={styles.pageWrapper}>
-      {/* Overlay */}
       <div style={styles.overlay}></div>
 
-      {/* Main Content */}
-      <div style={styles.container}>
-        {/* Left: Contact Form */}
-        <div style={styles.leftColumn}>
-          <h2 style={styles.mainHeading}>Request a Call</h2>
-          <form onSubmit={handleSubmit} style={styles.form}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              style={styles.input}
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              style={styles.input}
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              rows={4}
-              style={styles.textarea}
-            />
-            <button type="submit" style={styles.submitBtn}>Submit</button>
-          </form>
+      <div style={styles.centerContent}>
+        <div style={styles.container}>
+          {/* Left Column */}
+          <div style={styles.leftColumn}>
+            <h2 style={styles.mainHeading}>📞 Request a Call</h2>
+            <form onSubmit={handleSubmit} style={styles.form}>
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                style={styles.input}
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                style={styles.input}
+              />
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                rows={4}
+                style={styles.textarea}
+              />
+              <button type="submit" style={styles.submitBtn}>Submit</button>
+            </form>
 
-          <div style={styles.branchInfo}>
-            <h3>Delhi Branch</h3>
-            <p>NSP Complex, New Delhi, India</p>
-            <p>📞 +91-9876543210</p>
-            <p>✉️ delhi@promopact.com</p>
-          </div>
-        </div>
-
-        {/* Right: Other Contact Options */}
-        <div style={styles.rightColumn}>
-          <h2 style={styles.mainHeading}>How else can we help?</h2>
-
-          <div style={styles.card}>
-            <h4>📞 Talk to Sales</h4>
-            <p>Have product or pricing questions?</p>
-            <p><strong>+91-9876543210</strong></p>
+            <div style={styles.branchInfo}>
+              <h3 style={styles.subHeading}>🏢 Delhi Branch</h3>
+              <p>NSP Complex, New Delhi, India</p>
+              <p>📞 +91-9876543210</p>
+              <p>✉️ delhi@promopact.com</p>
+            </div>
           </div>
 
-          <div style={styles.card}>
-            <h4>💬 Chat with Us</h4>
-            <p>Get instant help with our virtual assistant</p>
-            <button style={styles.chatBtn}>Start Chat</button>
-          </div>
+          {/* Right Column */}
+          <div style={styles.rightColumn}>
+            <h2 style={styles.mainHeading}>💡 How else can we help?</h2>
 
-          <div style={styles.card}>
-            <h4>📧 Email Support</h4>
-            <p>Order or account-related issues?</p>
-            <p><strong>support@promopact.com</strong></p>
+            <div style={styles.card}>
+              <h4 style={styles.cardTitle}>📞 Talk to Sales</h4>
+              <p>Have product or pricing questions?</p>
+              <p><strong>+91-9876543210</strong></p>
+            </div>
+
+            <div style={styles.card}>
+              <h4 style={styles.cardTitle}>💬 Chat with Us</h4>
+              <p>Get instant help with our virtual assistant</p>
+              <button style={styles.chatBtn}>Start Chat</button>
+            </div>
+
+            <div style={styles.card}>
+              <h4 style={styles.cardTitle}>📧 Email Support</h4>
+              <p>Order or account-related issues?</p>
+              <p><strong>support@promopact.com</strong></p>
+            </div>
           </div>
         </div>
       </div>
@@ -93,7 +93,8 @@ const ContactPage = () => {
   );
 };
 
-const backgroundImageUrl = "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1950&q=80";
+const backgroundImageUrl =
+  "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1950&q=80";
 
 const styles = {
   pageWrapper: {
@@ -102,8 +103,11 @@ const styles = {
     backgroundPosition: "center",
     minHeight: "100vh",
     position: "relative",
-    padding: "40px 20px",
     fontFamily: "'Segoe UI', sans-serif",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "40px 20px",
   },
   overlay: {
     position: "absolute",
@@ -111,37 +115,48 @@ const styles = {
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    backgroundColor: "rgba(0, 0, 0, 0.6)",
     zIndex: 0,
+  },
+  centerContent: {
+    width: "100%",
+    maxWidth: "1300px",
+    position: "relative",
+    zIndex: 1,
   },
   container: {
     display: "flex",
     flexWrap: "wrap",
-    maxWidth: "1200px",
-    margin: "0 auto",
     gap: "30px",
-    position: "relative",
-    zIndex: 1,
+    justifyContent: "center",
   },
   leftColumn: {
     flex: "1 1 500px",
-    backgroundColor: "rgba(255, 255, 255, 0.95)",
+    backgroundColor: "rgba(255, 255, 255, 0.85)",
+    backdropFilter: "blur(8px)",
     padding: "30px",
-    borderRadius: "8px",
-    boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
+    borderRadius: "12px",
+    boxShadow: "0 12px 24px rgba(0,0,0,0.3)",
   },
   rightColumn: {
     flex: "1 1 300px",
-    backgroundColor: "rgba(255, 255, 255, 0.95)",
+    backgroundColor: "rgba(255, 255, 255, 0.85)",
+    backdropFilter: "blur(8px)",
     padding: "30px",
-    borderRadius: "8px",
-    boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
-    alignSelf: "flex-start",
+    borderRadius: "12px",
+    boxShadow: "0 12px 24px rgba(0,0,0,0.3)",
   },
   mainHeading: {
     marginBottom: "20px",
-    color: "#333",
-    fontSize: "22px",
+    color: "#1f2937",
+    fontSize: "24px",
+    fontWeight: "600",
+  },
+  subHeading: {
+    color: "#374151",
+    fontSize: "18px",
+    fontWeight: "500",
+    marginBottom: "5px",
   },
   form: {
     display: "flex",
@@ -178,10 +193,17 @@ const styles = {
     color: "#555",
   },
   card: {
-    backgroundColor: "#f8f9fa",
+    backgroundColor: "#ffffffd9",
     padding: "20px",
-    borderRadius: "6px",
+    borderRadius: "8px",
     marginBottom: "20px",
+    boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
+  },
+  cardTitle: {
+    fontSize: "18px",
+    fontWeight: "600",
+    marginBottom: "8px",
+    color: "#333",
   },
   chatBtn: {
     marginTop: "10px",

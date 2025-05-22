@@ -13,7 +13,7 @@ const About = () => {
           <p style={styles.subtext}>
             Promopact Marketing India Pvt Ltd helps thousands of businesses thrive with powerful tools and services.
             From product discovery to reliable delivery, our all-in-one commerce platform empowers both sellers and buyers.
-
+            <br /><br />
             At Promopact Marketing India Pvt. Ltd., we believe that online shopping should be simple, trustworthy, and rewarding. Founded with a vision to bridge the gap between quality and affordability, we’ve built a platform where customers can discover top-tier products, exclusive deals, and seamless service—all under one roof. From everyday essentials to niche collections, every item we offer is carefully curated to meet the needs of modern consumers. Our team is driven by passion, innovation, and a deep commitment to customer satisfaction. With a growing network of happy shoppers across the country, Promopact isn't just an online store—it's a community built on trust, value, and excellence. Whether you're a first-time visitor or a returning customer, we’re here to power your shopping journey with reliability and care.
           </p>
           <p style={styles.subtext}>
@@ -57,7 +57,7 @@ const styles = {
     backgroundImage: `url('${backgroundImageUrl}')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    padding: '60px 20px',
+    padding: '100px 20px', // Increased top padding
     fontFamily: "'Segoe UI', sans-serif",
     minHeight: '100vh',
   },
